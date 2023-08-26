@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content class="container">
-  <ion-card class="imgCard">
+  <!--   <ion-card class="imgCard">
     <img src="assets/img/android.png" />
     <ion-card-header>
       <div>
@@ -27,9 +27,30 @@
       condiciones.....</ion-checkbox>
     <ion-button expand="block" color="success" [disabled]="disableButton"
       (click)="showMessage()">Registarme</ion-button>
+  </div> -->
 
-  </div>
 
+  <!--   <div class="users" *ngIf="isShow">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi porro doloribus incidunt minus illum id labore
+      consequatur at et, explicabo, laudantium, delectus quidem? Ipsam illum officiis amet eaque, doloribus harum.</p>
+  </div> -->
 
+  <!--   <ion-item *ngFor="let product of people; let position = index" (click)="productDetail(product,position)">
+    <ion-label>{{product}}</ion-label>
+  </ion-item> -->
+
+  <!--   <ion-item *ngFor="let person of people; let position = index" (click)="personDetail(person,position)">
+    <ion-label *ngIf="person.age < 30"><b>Nombre:</b> {{person.name}}</ion-label>
+    <ion-label *ngIf="person.age < 30"><b>Edad:</b> {{person.age}}</ion-label>
+  </ion-item> -->
+
+  <ion-item *ngFor="let person of people; let position = index" (click)="personDetail(person)">
+    <ion-label [ngClass]="{'clicked': false}"><b>Nombre:</b> {{person.name}}</ion-label>
+    <ion-label [ngClass]="{'clicked': false}"><b>Edad:</b> {{person.age}}</ion-label>
+  </ion-item>
+
+  <ion-button (click)=" show()" color="warning" expand="block" shape="round">
+    Show / Hide
+  </ion-button>
 
 </ion-content>
