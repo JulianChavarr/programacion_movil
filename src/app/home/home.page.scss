@@ -1,5 +1,5 @@
 .container {
-  //--background: red;
+  background: red;
 }
 
 .imgCard {
@@ -27,4 +27,33 @@ ion-checkbox::part(container) {
 
 .pending {
   background-color: red;
+}
+
+.success-alert .alert-message {
+  --background: lightgreen;
+  color: lightgreen;
+}
+
+.error-alert .alert-message {
+  --background: red;
+  color: red;
+}
+
+.cyan-row {
+  --background: cyan;
+  color: black;
+}
+
+.green-row {
+  --background: lightgreen;
+  color: black;
+}
+
+.red-row {
+  --background: red;
+  color: black;
+}
+
+.clicked {
+  --background: lightgreen;
 }
